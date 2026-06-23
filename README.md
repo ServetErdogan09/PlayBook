@@ -25,12 +25,10 @@ Uygulama modern Android geliştirme standartlarına uygun olarak inşa edilmişt
 
 ## 📸 Ekran Görüntüleri
 
-*(Buraya uygulamanın ekran görüntülerini ekleyebilirsiniz)*
 <p align="center">
-  <img src="https://via.placeholder.com/250x500.png?text=Splash+Screen" width="200" />
-  <img src="https://via.placeholder.com/250x500.png?text=Liste+Ekrani" width="200" />
-  <img src="https://via.placeholder.com/250x500.png?text=Editor+Ekrani" width="200" />
-  <img src="https://via.placeholder.com/250x500.png?text=Animasyon+Izleyici" width="200" />
+  <img src="screenshots/liste.jpeg" width="200" />
+  <img src="screenshots/editor.jpeg" width="200" />
+  <img src="screenshots/animasyon.jpeg" width="200" />
 </p>
 
 ## 🚀 Kurulum
