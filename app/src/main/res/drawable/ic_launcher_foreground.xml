@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive Icon Foreground: 108x108 dp. Orijinal çizimi merkeze (72x72 safe zone) yerleştiriyoruz -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Her şeyi merkeze ortalamak için translation ve scale kullanıyoruz -->
+    <!-- Eski viewBox: 200x188. Yeni hedef: 72x72 içine sığdırmak (0.35 scale) -->
+    <group
+        android:translateX="19"
+        android:translateY="21"
+        android:scaleX="0.35"
+        android:scaleY="0.35">
+
+        <!-- Dış Çerçeve -->
+        <path
+            android:pathData="M4,4 L196,4 L196,184 L4,184 Z"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="5"
+            android:fillColor="#00000000" />
+
+        <!-- Boyalı Alan (Paint) -->
+        <path
+            android:pathData="M68,4 L132,4 L132,85 L68,85 Z"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- Serbest Atış Çizgisi -->
+        <path
+            android:pathData="M68,85 L132,85"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- Serbest Atış Dairesi -->
+        <path
+            android:pathData="M100,85 m-32,0 a32,32 0 0,0 64,0"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- Pota (Küçük dikdörtgen) -->
+        <path
+            android:pathData="M88,4 L112,4 L112,18 L88,18 Z"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#1A2744" />
+
+        <!-- Pota Çemberi -->
+        <path
+            android:pathData="M100,18 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"
+            android:strokeColor="#FF6B35"
+            android:strokeWidth="4"
+            android:fillColor="#00000000" />
+
+        <!-- 3 Sayılık Yay Sol Düz Çizgi -->
+        <path
+            android:pathData="M10,4 L10,50"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- 3 Sayılık Yay Sağ Düz Çizgi -->
+        <path
+            android:pathData="M190,4 L190,50"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- 3 Sayılık Yay -->
+        <path
+            android:pathData="M10,50 A100,120 0 0,0 190,50"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- Orta Çizgi -->
+        <path
+            android:pathData="M4,184 L196,184"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="3"
+            android:fillColor="#00000000" />
+
+        <!-- Oyuncu O1 -->
+        <path
+            android:pathData="M100,160 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="4"
+            android:fillColor="#151C2E" />
+
+        <!-- Oyuncu O2 -->
+        <path
+            android:pathData="M155,130 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="4"
+            android:fillColor="#151C2E" />
+
+        <!-- Oyuncu O3 -->
+        <path
+            android:pathData="M45,130 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"
+            android:strokeColor="#00E3FD"
+            android:strokeWidth="4"
+            android:fillColor="#151C2E" />
+
+        <!-- Oyuncu O4 -->
+        <path
+            android:pathData="M130,95 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"
+            android:strokeColor="#2792FF"
+            android:strokeWidth="4"
+            android:fillColor="#151C2E" />
+
+        <!-- Oyuncu O5 -->
+        <path
+            android:pathData="M70,95 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"
+            android:strokeColor="#2792FF"
+            android:strokeWidth="4"
+            android:fillColor="#151C2E" />
+
+        <!-- Top (O1 üzerinde) -->
+        <path
+            android:pathData="M100,148 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"
+            android:fillColor="#FF6B35"
+            android:strokeColor="#FF8C42"
+            android:strokeWidth="2" />
+    </group>
+</vector>

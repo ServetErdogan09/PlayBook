@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PlayBook" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Splash Screen Teması -->
+    <style name="Theme.PlayBook.Splash" parent="Theme.SplashScreen">
+        <!-- Splash arka plan rengi — uygulamanın koyu navy rengi -->
+        <item name="windowSplashScreenBackground">#0B0F1A</item>
+        <!-- Merkezdeki ikon (basketbol sahası) -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+        <!-- Splash bittikten sonra geçiş yapılacak tema -->
+        <item name="postSplashScreenTheme">@style/Theme.PlayBook</item>
+    </style>
+
+</resources>
