@@ -2,6 +2,12 @@
 
 PlayBook, basketbol antrenörleri ve oyuncuları için geliştirilmiş modern, çevrimdışı (offline-first) ve interaktif bir taktik çizim & animasyon uygulamasıdır. Klasik taktik tahtalarını dijitale taşıyarak setlerinizi adım adım oluşturmanızı ve bu setleri animasyonlu bir şekilde oynatarak oyuncularınıza göstermenizi sağlar.
 
+## 🎯 Uygulamanın Amacı
+
+Geleneksel antrenmanlarda taktik tahtası üzerinde set çizmek ve bunu oyunculara anlatmak genellikle zaman kaybına ve yanlış anlaşılmalara yol açabilir. PlayBook'un temel amacı bu süreci dijitalleştirerek **zaman kazanmak** ve **öğrenimi kolaylaştırmaktır**. 
+
+Antrenörler, idman veya maç öncesinde kullanacakları hücum ve savunma setlerini uygulamaya önceden çizer ve kaydeder. Saha içinde oyunculara bu setleri statik çizgiler yerine **akıcı bir animasyon** olarak izletmek, oyuncuların (özellikle genç sporcuların) pas zamanlamalarını, kimin nereye koşması gerektiğini ve sahaya nasıl yerleşeceklerini çok daha hızlı ve net bir şekilde kavramalarını sağlar.
+
 ## 🌟 Özellikler
 
 - **İnteraktif Taktik Tahtası:** Oyuncuları (O1-O5) sürükle-bırak yöntemiyle sahaya yerleştirin.
@@ -30,6 +36,16 @@ Uygulama modern Android geliştirme standartlarına uygun olarak inşa edilmişt
   <img src="screenshots/editor.jpeg" width="200" />
   <img src="screenshots/animasyon.jpeg" width="200" />
 </p>
+
+## 🎥 Uygulama Videoları
+
+**Taktik Tahtası ve Animasyon:**
+<br>
+![Uygulama Videosu](assets/uygulama_videosu.gif)
+
+**Kişiselleştirilebilir Renk Ayarları:**
+<br>
+![Ayarlar Videosu](assets/ayarlar_videosu.gif)
 
 ## 🚀 Kurulum
 
