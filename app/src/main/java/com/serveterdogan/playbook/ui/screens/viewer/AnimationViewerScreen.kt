@@ -156,7 +156,10 @@ fun AnimationViewerScreen(
             ) {
                 TacticalBoard(
                     playerPositions = uiState.playerPositions,
-                    ballPosition = uiState.ballPosition
+                    ballPosition = uiState.ballPosition,
+                    courtColorHex = uiState.courtColor,
+                    playerColorHex = uiState.playerColor,
+                    ballColorHex = uiState.ballColor
                 )
             }
             
@@ -179,17 +182,24 @@ fun AnimationViewerScreen(
 @Composable
 fun TacticalBoard(
     playerPositions: Map<String, Position>,
-    ballPosition: Position
+    ballPosition: Position,
+    courtColorHex: String,
+    playerColorHex: String,
+    ballColorHex: String
 ) {
     val textMeasurer = rememberTextMeasurer()
     
+    val courtBgColor = try { Color(android.graphics.Color.parseColor(courtColorHex)) } catch (e: Exception) { Color(0xFF121A2A) }
+    val playerBgColor = try { Color(android.graphics.Color.parseColor(playerColorHex)) } catch (e: Exception) { Color(0xFF151C2E) }
+    val ballBgColor = try { Color(android.graphics.Color.parseColor(ballColorHex)) } catch (e: Exception) { Color(0xFFE65100) }
+
     // Taktik tahtasının kendisi. En boy oranı yarı sahayı temsil eder (50/47)
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(50f / 47f)
             .clip(RoundedCornerShape(8.dp))
-            .background(Color(0xFF121A2A)) // Sahanın ahşap/taktik koyu mavi rengi
+            .background(courtBgColor) // Sahanın ahşap/taktik koyu mavi rengi
             .border(2.dp, Color.White.copy(alpha = 0.2f), RoundedCornerShape(8.dp))
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
@@ -264,7 +274,7 @@ fun TacticalBoard(
                 
                 // Oyuncu Yuvarlağı
                 drawCircle(
-                    color = Color(0xFF151C2E), // Koyu iç
+                    color = playerBgColor, // Koyu iç
                     radius = playerRadius,
                     center = Offset(pxX, pxY)
                 )
@@ -300,7 +310,7 @@ fun TacticalBoard(
             val ballRadius = 6.dp.toPx()
             
             drawCircle(
-                color = Color(0xFFE65100), // Turuncu Basketbol Topu
+                color = ballBgColor, // Turuncu Basketbol Topu
                 radius = ballRadius,
                 center = Offset(ballPxX, ballPxY)
             )
