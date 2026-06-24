@@ -208,6 +208,8 @@ fun EditorScreen(
                     playerPositions = uiState.playerPositions,
                     interactionState = uiState.interactionState,
                     selectedPrimaryId = uiState.selectedPrimaryPlayerId,
+                    courtColorHex = uiState.courtColor,
+                    playerColorHex = uiState.playerColor,
                     onPlayerDragged = { id, x, y -> viewModel.updatePlayerPosition(id, x, y) },
                     onPlayerClicked = { id -> viewModel.onPlayerClicked(id) },
                     onCourtClicked = { x, y -> viewModel.onCourtClicked(x, y) }
@@ -387,16 +389,21 @@ fun EditorTacticalBoard(
     playerPositions: Map<String, Position>,
     interactionState: InteractionState,
     selectedPrimaryId: String?,
+    courtColorHex: String,
+    playerColorHex: String,
     onPlayerDragged: (String, Float, Float) -> Unit,
     onPlayerClicked: (String) -> Unit,
     onCourtClicked: (Float, Float) -> Unit
 ) {
+    val courtBgColor = try { Color(android.graphics.Color.parseColor(courtColorHex)) } catch (e: Exception) { Color(0xFF121A2A) }
+    val playerBgColor = try { Color(android.graphics.Color.parseColor(playerColorHex)) } catch (e: Exception) { Color(0xFF151C2E) }
+
     BoxWithConstraints(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(50f / 47f)
             .clip(RoundedCornerShape(8.dp))
-            .background(Color(0xFF121A2A)) // Court SVG background
+            .background(courtBgColor) // Court SVG background
             .border(2.dp, Color.White.copy(alpha = 0.2f), RoundedCornerShape(8.dp))
             .shadow(elevation = 15.dp, spotColor = Color(0xFF00E3FD).copy(alpha = 0.05f)) // Taktik tahtası glow
             .pointerInput(interactionState) {
@@ -497,7 +504,7 @@ fun EditorTacticalBoard(
                     )
                     // oyuncuların arka planını değiştiriyor
                     .background(
-                        color = Color(0xFF151C2E),
+                        color = playerBgColor,
                         shape = CircleShape
                     )
                     .border(

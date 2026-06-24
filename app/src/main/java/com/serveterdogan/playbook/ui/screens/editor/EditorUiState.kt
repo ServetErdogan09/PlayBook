@@ -38,5 +38,10 @@ data class EditorUiState(
     val selectedTargetPlayerId: String? = null,
     
     // UI'da kullanıcıya ne yapması gerektiğini söyleyen mesaj
-    val hintMessage: String = "Oyuncuları yerleştir veya bir eylem seç."
+    val hintMessage: String = "Oyuncuları yerleştir veya bir eylem seç.",
+    
+    // Tema Renkleri
+    val courtColor: String = "#121A2A",
+    val playerColor: String = "#151C2E",
+    val ballColor: String = "#F28C38"
 )
