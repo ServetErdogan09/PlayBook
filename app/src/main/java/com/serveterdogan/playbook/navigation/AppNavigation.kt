@@ -53,7 +53,8 @@ fun AppNavigation() {
     val navItems = listOf(
         Routes.PlayList,
         Routes.Editor,
-        Routes.AnimationViewer
+        Routes.AnimationViewer,
+        Routes.Settings
     )
 
     ModalNavigationDrawer(
@@ -255,6 +256,12 @@ fun AppNavigation() {
                 val playbookId = backStackEntry.arguments?.getString("playbookId")
                 AnimationViewerScreen(
                     playbookId = playbookId,
+                    onNavigateBack = { scope.launch { drawerState.open() } }
+                )
+            }
+
+            composable(Routes.Settings.route) {
+                com.serveterdogan.playbook.ui.screens.settings.SettingsScreen(
                     onNavigateBack = { scope.launch { drawerState.open() } }
                 )
             }
