@@ -22,9 +22,12 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 import javax.inject.Inject
 
+import com.serveterdogan.playbook.data.local.datastore.SettingsRepository
+
 @HiltViewModel
 class EditorViewModel @Inject constructor(
-    private val repository: PlaybookRepository
+    private val repository: PlaybookRepository,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(EditorUiState())
@@ -32,6 +35,24 @@ class EditorViewModel @Inject constructor(
 
     private val _snackbar = MutableSharedFlow<String>()
     val snackbar = _snackbar.asSharedFlow()
+
+    init {
+        viewModelScope.launch {
+            settingsRepository.courtColor.collect { color ->
+                _uiState.update { it.copy(courtColor = color) }
+            }
+        }
+        viewModelScope.launch {
+            settingsRepository.playerColor.collect { color ->
+                _uiState.update { it.copy(playerColor = color) }
+            }
+        }
+        viewModelScope.launch {
+            settingsRepository.ballColor.collect { color ->
+                _uiState.update { it.copy(ballColor = color) }
+            }
+        }
+    }
 
     /**
      * Oyuncuyu sahada sürüklerken çağrılır.

@@ -11,5 +11,10 @@ data class ViewerUiState(
     val playerPositions: Map<String, Position> = emptyMap(),
     val ballPosition: Position = Position(0.5f, 0.5f),
     // 0.5x → yavaş, 1.0x → normal, 2.0x → hızlı
-    val speedMultiplier: Float = 1.0f
+    val speedMultiplier: Float = 1.0f,
+    
+    // Tema Renkleri
+    val courtColor: String = "#121A2A",
+    val playerColor: String = "#151C2E",
+    val ballColor: String = "#F28C38"
 )
