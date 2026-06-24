@@ -19,15 +19,36 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.math.abs
 
+import com.serveterdogan.playbook.data.local.datastore.SettingsRepository
+
 @HiltViewModel
 class ViewerViewModel @Inject constructor(
-    private val repository: PlaybookRepository
+    private val repository: PlaybookRepository,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ViewerUiState())
     val uiState: StateFlow<ViewerUiState> = _uiState.asStateFlow()
 
     private var playbackJob: Job? = null
+
+    init {
+        viewModelScope.launch {
+            settingsRepository.courtColor.collect { color ->
+                _uiState.update { it.copy(courtColor = color) }
+            }
+        }
+        viewModelScope.launch {
+            settingsRepository.playerColor.collect { color ->
+                _uiState.update { it.copy(playerColor = color) }
+            }
+        }
+        viewModelScope.launch {
+            settingsRepository.ballColor.collect { color ->
+                _uiState.update { it.copy(ballColor = color) }
+            }
+        }
+    }
 
     /**
      * İzleyici ekranı açıldığında veritabanından set verilerini yükler.
