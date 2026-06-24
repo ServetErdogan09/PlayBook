@@ -13,4 +13,6 @@ sealed class Routes( val route : String , val  icon : Int  , val  title : String
     object AnimationViewer : Routes("animationViewer?playbookId={playbookId}", R.drawable.playbottom, "İzle") {
         fun createRoute(playbookId: String) = "animationViewer?playbookId=$playbookId"
     }
+
+    object Settings : Routes("Settings", R.drawable.settings, "Ayarlar")
 }
