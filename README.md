@@ -29,23 +29,20 @@ Uygulama modern Android geliştirme standartlarına uygun olarak inşa edilmişt
 - **Yerel Veritabanı:** [Room](https://developer.android.com/training/data-storage/room)
 - **Asenkron İşlemler & State:** Coroutines, StateFlow
 
-## 📸 Ekran Görüntüleri
-
-<p align="center">
-  <img src="screenshots/liste.jpeg" width="200" />
-  <img src="screenshots/editor.jpeg" width="200" />
-  <img src="screenshots/animasyon.jpeg" width="200" />
-</p>
-
 ## 🎥 Uygulama Videoları
 
 **Taktik Tahtası ve Animasyon:**
 <br>
 ![Uygulama Videosu](assets/uygulama_videosu.gif)
 
-**Kişiselleştirilebilir Renk Ayarları:**
-<br>
-![Ayarlar Videosu](assets/ayarlar_videosu.gif)
+## 📸 Ekran Görüntüleri
+
+<p align="center">
+  <img src="screenshots/liste.jpeg" width="200" />
+  <img src="screenshots/editor.jpeg" width="200" />
+  <img src="screenshots/animasyon.jpeg" width="200" />
+  <img src="screenshots/settings.jpeg" width="200" />
+</p>
 
 ## 🚀 Kurulum
 
